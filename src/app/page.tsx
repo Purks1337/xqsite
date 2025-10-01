@@ -40,6 +40,12 @@ export default function HomePage() {
         />
       </div>
 
+      {/* Black Overlay Mask */}
+      <div 
+        className="fixed inset-0 w-screen h-screen z-10"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}
+      ></div>
+
       {/* Header */}
       <header className="relative z-50">
         <nav aria-label="Global" className="flex items-center justify-between px-7 py-3">
