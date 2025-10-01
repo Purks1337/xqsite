@@ -18,9 +18,9 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-[#181818] w-screen h-screen relative overflow-hidden">
+    <div className="bg-[#181818] w-screen h-[100vh] relative overflow-hidden">
       {/* Video Background Container */}
-      <div className="fixed inset-0 w-screen h-screen z-0">
+      <div className="fixed inset-0 w-screen h-[100vh] z-0">
         <iframe 
           src="https://kinescope.io/embed/qR2muYoMmovDtEFRDfMHfc" 
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" 
@@ -42,15 +42,15 @@ export default function HomePage() {
 
       {/* Black Overlay Mask */}
       <div 
-        className="fixed inset-0 w-screen h-screen z-10"
+        className="fixed inset-0 w-screen h-[100vh] z-10"
         style={{ backgroundColor: 'rgba(8, 5, 2, 0.5)' }}
       ></div>
 
       {/* Main Container - точно как в Figma */}
-      <div className="relative z-20 flex flex-col justify-between items-center gap-[209px] px-7 py-[30px] h-full w-full">
+      <div className="relative z-20 flex flex-col justify-between items-center gap-[209px] px-[412px] py-[30px] h-[100vh] w-full xl:px-[412px] lg:px-7 md:px-7 sm:px-3.5 xs:px-2 xl:gap-[209px] lg:gap-[209px] md:gap-[209px] sm:gap-8 xs:gap-6">
         {/* Header */}
         <header className="w-full">
-          <nav aria-label="Global" className="flex items-center justify-between px-3 py-3 w-full">
+          <nav aria-label="Global" className="flex items-center justify-between gap-[82px] px-3 py-3 w-full xl:px-3 lg:px-3 md:px-3 sm:px-2 xs:px-2">
           {/* Logo */}
           <div className="flex items-center">
             <a href="#" className="flex items-center">
@@ -78,7 +78,7 @@ export default function HomePage() {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden lg:flex lg:gap-x-20">
+          <div className="hidden lg:flex lg:gap-x-[82px]">
             {navigation.map((item) => (
               <a 
                 key={item.name} 
@@ -156,12 +156,12 @@ export default function HomePage() {
         {/* Rotating Text Section - точно как в Figma */}
         <LayoutGroup>
           <motion.div 
-            className="flex items-center justify-center gap-[14px]"
+            className="flex items-center justify-center gap-[14px] xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col"
             layout
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
           >
             <motion.span 
-              className="text-[#F5F5F5] font-stolzl font-bold text-[64px] leading-[1.2] text-center"
+              className="text-[#F5F5F5] font-stolzl font-bold text-[64px] leading-[1.2] text-center xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[48px] xs:text-[40px]"
               layout
               transition={{ type: 'spring', damping: 30, stiffness: 400 }}
             >
@@ -187,7 +187,7 @@ export default function HomePage() {
                   'Уроки',
                   'Курсы',
                 ]}
-                mainClassName="text-white font-stolzl font-bold text-[64px] leading-[1.2]"
+                mainClassName="text-white font-stolzl font-bold text-[64px] leading-[1.2] xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[48px] xs:text-[40px]"
                 staggerFrom="last"
                 initial={{ y: '100%', opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -209,7 +209,7 @@ export default function HomePage() {
         </LayoutGroup>
 
         {/* Bottom Info Section - точно как в Figma */}
-        <div className="flex flex-col items-center justify-center gap-[34px] px-[294px] w-full">
+        <div className="flex flex-col items-center justify-center gap-[34px] w-[628px] xl:w-[628px] lg:w-[628px] md:w-[628px] sm:w-full xs:w-full">
           {/* Text Content */}
           <div className="flex flex-col items-center gap-[14px] w-full">
             <h1 className="font-stolzl font-medium text-[20px] leading-[1.2] text-center" style={{ color: '#FDEBDD' }}>
@@ -221,10 +221,10 @@ export default function HomePage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center justify-center gap-6 w-full">
+          <div className="flex items-center justify-center gap-6 w-full xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col xl:gap-6 lg:gap-6 md:gap-6 sm:gap-2 xs:gap-2">
             <a
               href="#"
-              className="hover:opacity-90 text-white px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              className="hover:opacity-90 text-white px-3 py-[18px] rounded text-sm font-normal transition-colors text-center flex items-center justify-center xl:px-3 lg:px-3 md:px-3 sm:w-full xs:w-full"
               style={{ 
                 fontSize: '14px', 
                 lineHeight: '1.21', 
@@ -236,7 +236,7 @@ export default function HomePage() {
             </a>
             <a
               href="#"
-              className="hover:opacity-90 px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              className="hover:opacity-90 px-3 py-[18px] rounded text-sm font-normal transition-colors text-center flex items-center justify-center xl:px-3 lg:px-3 md:px-3 sm:w-full xs:w-full"
               style={{ 
                 fontSize: '14px', 
                 lineHeight: '1.21', 
