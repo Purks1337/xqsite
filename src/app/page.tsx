@@ -18,7 +18,7 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-[#181818] min-h-screen relative">
+    <div className="bg-[#181818] w-screen h-screen relative overflow-hidden">
       {/* Video Background Container */}
       <div className="fixed inset-0 w-screen h-screen z-0">
         <iframe 
@@ -43,12 +43,14 @@ export default function HomePage() {
       {/* Black Overlay Mask */}
       <div 
         className="fixed inset-0 w-screen h-screen z-10"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}
+        style={{ backgroundColor: 'rgba(8, 5, 2, 0.8)' }}
       ></div>
 
-      {/* Header */}
-      <header className="relative z-50">
-        <nav aria-label="Global" className="flex items-center justify-between px-7 py-3">
+      {/* Main Container - точно как в Figma */}
+      <div className="relative z-20 flex flex-col justify-between items-center gap-[209px] px-7 py-[30px] h-full w-full">
+        {/* Header */}
+        <header className="w-full">
+          <nav aria-label="Global" className="flex items-center justify-between px-3 py-3 w-full">
           {/* Logo */}
           <div className="flex items-center">
             <a href="#" className="flex items-center">
@@ -147,12 +149,10 @@ export default function HomePage() {
               </div>
             </div>
           </DialogPanel>
-        </Dialog>
-      </header>
+          </Dialog>
+        </header>
 
-      {/* Main Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center px-7 py-[209px] gap-[209px]">
-        {/* Rotating Text Section */}
+        {/* Rotating Text Section - точно как в Figma */}
         <LayoutGroup>
           <motion.div 
             className="flex items-center justify-center gap-[14px]"
@@ -164,7 +164,7 @@ export default function HomePage() {
               layout
               transition={{ type: 'spring', damping: 30, stiffness: 400 }}
             >
-              Снимаем:
+              Снимаем
             </motion.span>
             <motion.div 
               className="bg-[#3B3B3B] px-3 py-1 rounded-lg"
@@ -204,7 +204,7 @@ export default function HomePage() {
           </motion.div>
         </LayoutGroup>
 
-        {/* Info Section */}
+        {/* Bottom Info Section - точно как в Figma */}
         <div className="flex flex-col items-center justify-center gap-[34px] px-[294px] w-full">
           {/* Text Content */}
           <div className="flex flex-col items-center gap-[14px] w-full">
