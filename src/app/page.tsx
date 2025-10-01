@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* Black Overlay Mask */}
       <div 
         className="fixed inset-0 w-screen h-screen z-10"
-        style={{ backgroundColor: 'rgba(8, 5, 2, 0.8)' }}
+        style={{ backgroundColor: 'rgba(8, 5, 2, 0.5)' }}
       ></div>
 
       {/* Main Container - точно как в Figma */}
@@ -56,7 +56,7 @@ export default function HomePage() {
             <a href="#" className="flex items-center">
               <span className="sr-only">Хвалите</span>
               <Image 
-                src="/assets/LogoХQ.svg" 
+                src="/assets/LogoXQ.svg" 
                 alt="Хвалите" 
                 width={132}
                 height={38}
@@ -94,7 +94,8 @@ export default function HomePage() {
           <div className="hidden lg:flex">
             <a
               href="#"
-              className="bg-[#222222] hover:bg-[#333333] text-[#C3C3C3] px-[18px] py-2 rounded-full text-sm font-normal transition-colors"
+              className="hover:opacity-90 text-white px-[18px] py-2 rounded-full text-sm font-normal transition-colors"
+              style={{ backgroundColor: '#D5600C' }}
             >
               Оставить заявку
             </a>
@@ -109,7 +110,7 @@ export default function HomePage() {
               <a href="#" className="flex items-center">
                 <span className="sr-only">Хвалите</span>
                 <Image 
-                  src="/assets/LogoХQ.svg" 
+                  src="/assets/LogoXQ.svg" 
                   alt="Хвалите" 
                   width={132}
                   height={38}
@@ -167,7 +168,10 @@ export default function HomePage() {
               Снимаем
             </motion.span>
             <motion.div 
-              className="bg-[#3B3B3B] px-3 py-1 rounded-lg"
+              className="px-3 py-1 rounded-lg"
+              style={{
+                background: 'linear-gradient(180deg, #D5600C 0%, #994000 100%)'
+              }}
               layout
               transition={{ type: 'spring', damping: 30, stiffness: 400 }}
             >
@@ -208,10 +212,10 @@ export default function HomePage() {
         <div className="flex flex-col items-center justify-center gap-[34px] px-[294px] w-full">
           {/* Text Content */}
           <div className="flex flex-col items-center gap-[14px] w-full">
-            <h1 className="text-[#C3C3C3] font-stolzl font-medium text-[20px] leading-[1.2] text-center">
+            <h1 className="font-stolzl font-medium text-[20px] leading-[1.2] text-center" style={{ color: '#FDEBDD' }}>
               Видео — продакшн полного цикла
             </h1>
-            <p className="text-[#737373] font-normal text-[14px] leading-[1.4] text-center max-w-none">
+            <p className="font-normal text-[14px] leading-[1.4] text-center max-w-none" style={{ color: '#D1AD94' }}>
               От съемки на промышленном объекте до прямой трансляции международного форума. Более 10 лет решаем видео-задачи для бизнеса, ивентов и медиа.
             </p>
           </div>
@@ -220,13 +224,26 @@ export default function HomePage() {
           <div className="flex items-center justify-center gap-6 w-full">
             <a
               href="#"
-              className="bg-[#3B3B3B] hover:bg-[#4A4A4A] text-white px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              className="hover:opacity-90 text-white px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              style={{ 
+                fontSize: '14px', 
+                lineHeight: '1.21', 
+                fontWeight: 400,
+                backgroundColor: '#D5600C'
+              }}
             >
               Рассчитать стоимость
             </a>
             <a
               href="#"
-              className="border border-[#3B3B3B] hover:border-[#4A4A4A] text-[#737373] hover:text-white px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              className="hover:opacity-90 px-3 py-[18px] rounded text-sm font-normal transition-colors"
+              style={{ 
+                fontSize: '14px', 
+                lineHeight: '1.21', 
+                fontWeight: 400,
+                color: '#D1AD94',
+                border: '1px solid #D1AD94'
+              }}
             >
               Смотреть работы
             </a>
