@@ -26,6 +26,10 @@ body {
   font-family: 'Stolzl', sans-serif;
 }
 
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
 /* Кастомные брейкпоинты для точного соответствия Figma */
 @media (min-width: 320px) {
   .xs\:px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
@@ -35,9 +39,18 @@ body {
   .xs\:gap-6 { gap: 1.5rem; }
   .xs\:flex-col { flex-direction: column; }
   .xs\:w-full { width: 100%; }
+  .xs\:mx-0 { margin-left: 0; margin-right: 0; }
+  .xs\:px-\[8px\] { padding-left: 8px; padding-right: 8px; }
+  .xs\:w-\[304px\] { width: 304px; }
+  .xs\:min-w-\[304px\] { min-width: 304px; }
+  .xs\:max-w-\[304px\] { max-width: 304px; }
+  .xs\:h-\[306px\] { height: 306px; }
+  .xs\:gap-4 { gap: 1rem; }
+  .xs\:h-full { height: 100%; }
+  .xs\:justify-between { justify-content: space-between; }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 424px) {
   .sm\:px-3\.5 { padding-left: 0.875rem; padding-right: 0.875rem; }
   .sm\:text-\[48px\] { font-size: 48px; }
   .sm\:gap-2 { gap: 0.5rem; }
@@ -45,22 +58,69 @@ body {
   .sm\:gap-8 { gap: 2rem; }
   .sm\:flex-col { flex-direction: column; }
   .sm\:w-full { width: 100%; }
+  .sm\:mx-0 { margin-left: 0; margin-right: 0; }
+  .sm\:px-\[8px\] { padding-left: 8px; padding-right: 8px; }
+  .sm\:w-\[408px\] { width: 408px; }
+  .sm\:min-w-\[304px\] { min-width: 304px; }
+  .sm\:max-w-\[408px\] { max-width: 408px; }
+  .sm\:h-\[185px\] { height: 185px; }
+  .sm\:gap-4 { gap: 1rem; }
+  .sm\:h-full { height: 100%; }
+  .sm\:justify-between { justify-content: space-between; }
 }
 
-@media (min-width: 636px) {
+@media (min-width: 518px) {
   .md\:px-7 { padding-left: 1.75rem; padding-right: 1.75rem; }
   .md\:text-\[64px\] { font-size: 64px; }
   .md\:gap-6 { gap: 1.5rem; }
   .md\:gap-\[209px\] { gap: 209px; }
   .md\:flex-row { flex-direction: row; }
+  .md\:w-full { width: 100%; }
+  .md\:mx-0 { margin-left: 0; margin-right: 0; }
+  .md\:px-\[24px\] { padding-left: 24px; padding-right: 24px; }
+  .md\:w-\[470px\] { width: 470px; }
+  .md\:min-w-\[408px\] { min-width: 408px; }
+  .md\:max-w-\[470px\] { max-width: 470px; }
+  .md\:h-\[185px\] { height: 185px; }
+  .md\:gap-\[230px\] { gap: 230px; }
+  .md\:h-auto { height: auto; }
+  .md\:justify-between { justify-content: space-between; }
 }
 
-@media (min-width: 732px) {
+@media (min-width: 668px) and (max-width: 859px) {
   .lg\:px-7 { padding-left: 1.75rem; padding-right: 1.75rem; }
   .lg\:text-\[64px\] { font-size: 64px; }
   .lg\:gap-6 { gap: 1.5rem; }
   .lg\:gap-\[209px\] { gap: 209px; }
   .lg\:flex-row { flex-direction: row; }
+  .lg\:w-full { width: 100%; }
+  .lg\:mx-0 { margin-left: 0; margin-right: 0; }
+  .lg\:px-\[24px\] { padding-left: 24px; padding-right: 24px; }
+  .lg\:w-\[620px\] { width: 620px; }
+  .lg\:min-w-\[470px\] { min-width: 470px; }
+  .lg\:max-w-\[620px\] { max-width: 620px; }
+  .lg\:h-\[165px\] { height: 165px; }
+  .lg\:gap-\[230px\] { gap: 230px; }
+  .lg\:h-auto { height: auto; }
+  .lg\:justify-between { justify-content: space-between; }
+}
+
+@media (min-width: 860px) and (max-width: 1279px) {
+  .xl\:px-\[412px\] { padding-left: 412px; padding-right: 412px; }
+  .xl\:text-\[64px\] { font-size: 64px; }
+  .xl\:gap-6 { gap: 1.5rem; }
+  .xl\:gap-\[209px\] { gap: 209px; }
+  .xl\:flex-row { flex-direction: row; }
+  .xl\:w-full { width: 100%; }
+  .xl\:mx-0 { margin-left: 0; margin-right: 0; }
+  .xl\:px-\[72px\] { padding-left: 72px; padding-right: 72px; }
+  .xl\:w-\[620px\] { width: 620px; }
+  .xl\:min-w-\[620px\] { min-width: 620px; }
+  .xl\:max-w-\[620px\] { max-width: 620px; }
+  .xl\:h-\[165px\] { height: 165px; }
+  .xl\:gap-\[230px\] { gap: 230px; }
+  .xl\:h-auto { height: auto; }
+  .xl\:justify-between { justify-content: space-between; }
 }
 
 @media (min-width: 1280px) {
@@ -69,4 +129,14 @@ body {
   .xl\:gap-6 { gap: 1.5rem; }
   .xl\:gap-\[209px\] { gap: 209px; }
   .xl\:flex-row { flex-direction: row; }
+  .xl\:w-\[1136px\] { width: 1136px; }
+  .xl\:mx-auto { margin-left: auto; margin-right: auto; }
+  .xl\:px-0 { padding-left: 0; padding-right: 0; }
+  .xl\:w-\[620px\] { width: 620px; }
+  .xl\:min-w-\[620px\] { min-width: 620px; }
+  .xl\:max-w-\[620px\] { max-width: 620px; }
+  .xl\:h-\[165px\] { height: 165px; }
+  .xl\:gap-\[230px\] { gap: 230px; }
+  .xl\:h-auto { height: auto; }
+  .xl\:justify-between { justify-content: space-between; }
 }

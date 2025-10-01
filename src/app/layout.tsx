@@ -7,13 +7,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-// Define Stolzl font as a CSS variable
-const stolzlFont = {
-  variable: "--font-stolzl",
-  style: {
-    fontFamily: "'Stolzl', sans-serif",
-  },
-};
 
 export const metadata: Metadata = {
   title: "Хвалите - Видео продакшн полного цикла",
@@ -35,7 +28,6 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} antialiased`}
-        style={stolzlFont.style}
       >
         {children}
       </body>

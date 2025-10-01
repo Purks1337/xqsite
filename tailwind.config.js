@@ -7,14 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'xs': '320px',   // 320px
-        'sm': '480px',   // 480px
-        'md': '636px',   // 636px
-        'lg': '732px',   // 732px
-        'xl': '1280px',  // 1280px
-        '2xl': '1920px', // 1920px
-      },
+        screens: {
+          'xs': '320px',   // 320px
+          'sm': '424px',   // 424px
+          'md': '518px',   // 518px
+          'lg': '668px',   // 668px
+          'xl': '860px',   // 860px
+          '2xl': '1280px', // 1280px
+          '3xl': '1920px', // 1920px
+        },
       fontFamily: {
         'stolzl': ['Stolzl', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],

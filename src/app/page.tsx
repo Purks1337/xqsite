@@ -47,7 +47,9 @@ export default function HomePage() {
       ></div>
 
       {/* Main Container - точно как в Figma */}
-      <div className="relative z-20 flex flex-col justify-between items-center gap-[209px] px-[412px] py-[30px] h-[100vh] w-full xl:px-[412px] lg:px-7 md:px-7 sm:px-3.5 xs:px-2 xl:gap-[209px] lg:gap-[209px] md:gap-[209px] sm:gap-8 xs:gap-6">
+      <div className="relative z-20 flex flex-col justify-between items-center gap-[209px] py-[30px] h-[100vh] w-full xl:gap-[209px] lg:gap-[209px] md:gap-[209px] sm:gap-8 xs:gap-6 xl:px-0 lg:px-[72px] md:px-[24px] sm:px-[8px] xs:px-[8px]">
+        {/* Frame 32 - адаптивный контейнер */}
+        <div className="flex flex-col items-center justify-between gap-[230px] w-full xl:w-[1136px] lg:w-full md:w-full sm:w-full xs:w-full xl:mx-auto lg:mx-0 md:mx-0 sm:mx-0 xs:mx-0 xl:gap-[230px] lg:gap-[230px] md:gap-[230px] sm:gap-4 xs:gap-4 xl:h-auto lg:h-auto md:h-auto sm:h-full xs:h-full">
         {/* Header */}
         <header className="w-full">
           <nav aria-label="Global" className="flex items-center justify-between gap-[82px] px-3 py-3 w-full xl:px-3 lg:px-3 md:px-3 sm:px-2 xs:px-2">
@@ -209,13 +211,13 @@ export default function HomePage() {
         </LayoutGroup>
 
         {/* Bottom Info Section - точно как в Figma */}
-        <div className="flex flex-col items-center justify-center gap-[34px] w-[628px] xl:w-[628px] lg:w-[628px] md:w-[628px] sm:w-full xs:w-full">
+        <div className="flex flex-col items-center justify-center gap-[34px] w-[620px] min-w-[620px] max-w-[620px] h-[165px] xl:w-[620px] xl:min-w-[620px] xl:max-w-[620px] xl:h-[165px] lg:w-[620px] lg:min-w-[470px] lg:max-w-[620px] lg:h-[165px] md:w-[470px] md:min-w-[408px] md:max-w-[470px] md:h-[185px] sm:w-[408px] sm:min-w-[304px] sm:max-w-[408px] sm:h-[185px] xs:w-[304px] xs:min-w-[304px] xs:max-w-[304px] xs:h-[306px]">
           {/* Text Content */}
           <div className="flex flex-col items-center gap-[14px] w-full">
             <h1 className="font-stolzl font-medium text-[20px] leading-[1.2] text-center" style={{ color: '#FDEBDD' }}>
               Видео — продакшн полного цикла
             </h1>
-            <p className="font-normal text-[14px] leading-[1.4] text-center max-w-none" style={{ color: '#D1AD94' }}>
+            <p className="font-inter font-normal text-[14px] leading-[1.4] text-center max-w-none" style={{ color: '#D1AD94' }}>
               От съемки на промышленном объекте до прямой трансляции международного форума. Более 10 лет решаем видео-задачи для бизнеса, ивентов и медиа.
             </p>
           </div>
@@ -248,6 +250,7 @@ export default function HomePage() {
               Смотреть работы
             </a>
           </div>
+        </div>
         </div>
       </div>
     </div>
