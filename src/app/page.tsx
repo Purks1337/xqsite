@@ -18,7 +18,28 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-[#181818] min-h-screen">
+    <div className="bg-[#181818] min-h-screen relative">
+      {/* Video Background Container */}
+      <div className="fixed inset-0 w-screen h-screen z-0">
+        <iframe 
+          src="https://kinescope.io/embed/qR2muYoMmovDtEFRDfMHfc" 
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" 
+          frameBorder="0" 
+          allowFullScreen 
+          className="w-full h-full"
+          style={{ 
+            position: 'absolute', 
+            top: '50%', 
+            left: '50%', 
+            transform: 'translate(-50%, -50%)',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: 'auto',
+            height: 'auto'
+          }}
+        />
+      </div>
+
       {/* Header */}
       <header className="relative z-50">
         <nav aria-label="Global" className="flex items-center justify-between px-7 py-3">
@@ -124,7 +145,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center px-7 py-[209px] gap-[209px]">
+      <div className="relative z-20 flex flex-col items-center justify-center px-7 py-[209px] gap-[209px]">
         {/* Rotating Text Section */}
         <LayoutGroup>
           <motion.div 
